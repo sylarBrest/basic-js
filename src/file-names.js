@@ -17,13 +17,13 @@ const { NotImplementedError } = require("../lib");
  */
 function renameFiles(names) {
   let repeat = [];
-  for (i = 0; i < names.length; i++) {
+  for (let i = 0; i < names.length; i++) {
     let cur = names[i],
       count = 0;
-    for (j = 0; j < i; j++) if (cur === names[j]) count++;
+    for (let j = 0; j < i; j++) if (cur === names[j]) count++;
     repeat.push(count);
   }
-  for (i = 0; i < names.length; i++) {
+  for (let i = 0; i < names.length; i++) {
     names[i] = `${names[i]}${!repeat[i] ? "" : "(" + repeat[i] + ")"}`;
   }
   return repeat.filter((el) => el).length ? renameFiles(names) : names;

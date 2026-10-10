@@ -13,7 +13,7 @@ const { NotImplementedError } = require("../lib");
 
 function encodeLine(str) {
   let res = "";
-  for (i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     let char = str[i],
       count = 1;
     while (str[i + 1] === char[0]) {

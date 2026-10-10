@@ -14,7 +14,7 @@ const { NotImplementedError } = require("../lib");
 function deleteDigit(n) {
   const arr = [];
   n = n.toString();
-  for (i = 0; i < n.length; i++) {
+  for (let i = 0; i < n.length; i++) {
     arr.push(n.slice(0, i) + n.slice(i + 1));
   }
   return Math.max(...arr);

@@ -14,7 +14,7 @@ const { NotImplementedError } = require("../lib");
 
 function getCommonCharacterCount(s1, s2) {
   let commonChars = "";
-  for (let char of s1) {
+  for (const char of s1) {
     if (s2.includes(char)) {
       s2 = s2.slice(0, s2.indexOf(char)) + s2.slice(s2.indexOf(char) + 1);
       commonChars += char;

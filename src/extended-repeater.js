@@ -28,10 +28,10 @@ function repeater(str, options) {
     addSep = options.hasOwnProperty("additionSeparator")
       ? options.additionSeparator
       : "|";
-  for (j = 1; j <= addRepT; j++) {
+  for (let j = 1; j <= addRepT; j++) {
     addRes.push(add);
   }
-  for (i = 1; i <= repT; i++) {
+  for (let i = 1; i <= repT; i++) {
     strRes.push(str + addRes.join(`${addSep}`));
   }
   return strRes.join(`${sep}`);

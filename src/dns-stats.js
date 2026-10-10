@@ -29,12 +29,12 @@ function getDNSStats(domains) {
     .map((el) => el.split(".").reverse())
     .forEach((el) => {
       let dns = "";
-      for (word of el) {
+      for (const word of el) {
         dns += `.${word}`;
         res.push(dns);
       }
     });
-  for (dns of res)
+  for (const dns of res)
     dnsStats.hasOwnProperty(dns) ? dnsStats[dns]++ : (dnsStats[dns] = 1);
   return dnsStats;
 }
